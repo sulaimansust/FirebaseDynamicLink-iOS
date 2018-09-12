@@ -13,6 +13,7 @@
 		4D4B6F192148D39900B38A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B6F182148D39900B38A9C /* Assets.xcassets */; };
 		4D4B6F1C2148D39900B38A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B6F1A2148D39900B38A9C /* LaunchScreen.storyboard */; };
 		4D4B6F242148E1D000B38A9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B6F232148E1CF00B38A9C /* GoogleService-Info.plist */; };
+		51749F19AA266B1C2684A00F /* Pods_RnDDynamicLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D99E068E356E51C3820F87 /* Pods_RnDDynamicLink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		4D4B6F1B2148D39900B38A9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D4B6F1D2148D39900B38A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D4B6F232148E1CF00B38A9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5913FEC5E42D0D2F82C1EE13 /* Pods-RnDDynamicLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnDDynamicLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-RnDDynamicLink/Pods-RnDDynamicLink.release.xcconfig"; sourceTree = "<group>"; };
+		80D99E068E356E51C3820F87 /* Pods_RnDDynamicLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RnDDynamicLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92093C5F45CD711EF12B5DAA /* Pods-RnDDynamicLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnDDynamicLink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RnDDynamicLink/Pods-RnDDynamicLink.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51749F19AA266B1C2684A00F /* Pods_RnDDynamicLink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				4D4B6F102148D39700B38A9C /* RnDDynamicLink */,
 				4D4B6F0F2148D39700B38A9C /* Products */,
+				72CB6D52EB03D140297EDB58 /* Pods */,
+				A50BF992C23A36ADD873CB5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = RnDDynamicLink;
 			sourceTree = "<group>";
 		};
+		72CB6D52EB03D140297EDB58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92093C5F45CD711EF12B5DAA /* Pods-RnDDynamicLink.debug.xcconfig */,
+				5913FEC5E42D0D2F82C1EE13 /* Pods-RnDDynamicLink.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A50BF992C23A36ADD873CB5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80D99E068E356E51C3820F87 /* Pods_RnDDynamicLink.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D4B6F202148D39900B38A9C /* Build configuration list for PBXNativeTarget "RnDDynamicLink" */;
 			buildPhases = (
+				C2B2B44AD0FD605928639043 /* [CP] Check Pods Manifest.lock */,
 				4D4B6F0A2148D39700B38A9C /* Sources */,
 				4D4B6F0B2148D39700B38A9C /* Frameworks */,
 				4D4B6F0C2148D39700B38A9C /* Resources */,
+				7CE181151AB4BDE1519C2AA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +159,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CE181151AB4BDE1519C2AA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RnDDynamicLink/Pods-RnDDynamicLink-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RnDDynamicLink/Pods-RnDDynamicLink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2B2B44AD0FD605928639043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RnDDynamicLink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D4B6F0A2148D39700B38A9C /* Sources */ = {
@@ -282,6 +349,7 @@
 		};
 		4D4B6F212148D39900B38A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92093C5F45CD711EF12B5DAA /* Pods-RnDDynamicLink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -302,6 +370,7 @@
 		};
 		4D4B6F222148D39900B38A9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5913FEC5E42D0D2F82C1EE13 /* Pods-RnDDynamicLink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
